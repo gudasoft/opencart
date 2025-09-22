@@ -5,6 +5,10 @@ Displays prices in Bulgarian LV and EUR
 The instructions are in bulgarian
 
 
+Apply the patch for opencart 4.1.x.x to enable OCMOD modules.
+Do it from the /patch folder in this repo.
+
+
 # Инструкции за инсталация
 
 Трябва да имате валута BGN и EUR в OpenCart 4
