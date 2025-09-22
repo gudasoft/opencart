@@ -1,14 +1,16 @@
 <modification>
-	<id>Hide Model No For Product in Catalog</id>
+	<id>Hide Product Stock from Catalog</id>
     <version>1.0</version>
     <vqmver>2.6.6</vqmver>
+
     <author><![CDATA[<a onClick="window.open('http://www.gudasoft.com');" title="Gudasoft">Gudasoft</a>]]></author>
 
 
 	<file name="catalog/view/template/product/product.twig">
+
              <operation>
-             <search position="replace"><![CDATA[<li>{{ text_model }} {{ model }}</li>]]></search>
-             <add><![CDATA[{# <li>{{ text_model }} {{ model }}</li>#}]]></add>
+             <search position="replace"><![CDATA[<li>{{ text_stock }} {{ stock }}</li>]]></search>
+             <add><![CDATA[{# <li>{{ text_stock }} {{ stock }}</li>#}]]></add>
              </operation>
     </file>
 

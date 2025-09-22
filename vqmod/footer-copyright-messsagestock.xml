@@ -1,0 +1,19 @@
+<modification>
+	      <id>Replace Footer Text</id>
+    <version>1.0</version>
+    <vqmver>2.6.6</vqmver>
+
+    <author><![CDATA[<a onClick="window.open('http://www.gudasoft.com');" title="Gudasoft">Gudasoft</a>]]></author>
+
+
+    <file name="extension/ocbg_bg/catalog/language/bg/common/footer.php">
+        <operation>
+              <search position="replace" regex="true"><![CDATA[/._.'text_powered'.\s*=\s*'.*/]]></search>
+              <add><![CDATA[$_['text_powered']      = 'Изработка на онлайн магазин <a href="https://www.gudasoft.com"
+  target="_blank">Gudasoft</a><br/> %s &copy; %s';]]></add>
+        </operation>
+
+    </file>
+
+
+</modification>

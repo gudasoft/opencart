@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+  <name>OpenCart Dual Prices for Bulgaria Euro Transition</name>
+  <description>Adds Euro conversion display for BGN prices to help with Bulgaria Euro transition.
+    If you need professional web services you can find us on https://www.gudasoft.com/
+  </description>
+  <code>dual-prices</code>
+  <version>4.1.0.0</version>
+  <author>Gudasoft</author>
+  <link>https://gudasoft.com</link>
+
+  <file path="system/library/cart/currency.php">
+    <operation>
+      <search><![CDATA[return $string;]]></search>
+      <add position="before"><![CDATA[	if($currency == 'BGN'){
+		$amount_multiplied = round($amount / 1.95583, (int)$decimal_place);
+		$string_multiplied = '';
+		$string_multiplied .= number_format($amount_multiplied, (int)$decimal_place, $this->language->get('decimal_point'), $this->language->get('thousand_point'));
+		$string_multiplied .= '€';
+		$string .= ' (' . $string_multiplied . ')';
+	}
+]]></add>
+    </operation>
+  </file>
+</modification>

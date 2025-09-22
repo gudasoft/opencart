@@ -1,9 +1,30 @@
-# VQMod Extensions for OpenCart 4.1.x.x
+# Useful extension for open-cart for OpenCart 4.1.x.x
 
-This directory contains VQMod extensions for OpenCart 4.1.x.x.
+Those are tested with OpenCart: 4.1.x.x
 
-## Available Extensions
+Folders content:
 
+- patch - enable OCMOD
+- vqmod - extensions
+- ocmod - extensions
+
+
+## Patch
+
+Copy the files from version of opencart to your hosting. OCMOD will now work.
+
+
+## OCMOD Extensions
+
+location: ocmod/dual-prices.ocmod
+
+Display the prices in BGN and EUR.
+
+## VQMod Extensions
+
+This directory contains VQMod extensions
+
+VQMod: 2.6.6+ with the opencart scripts from their new repository
 
 ### Auto Model No For New Product
 
@@ -24,10 +45,6 @@ Hides the product model number from the product display page.
 - **Functionality**: Comments out the model display line in product templates
 
 
-## Compatibility
-
-- OpenCart: 4.1.x.x
-- VQMod: 2.6.6+ with the opencart scripts from their new repository
 
 ## Author
 

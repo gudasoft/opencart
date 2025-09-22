@@ -1,0 +1,17 @@
+<modification>
+	<id>Hide Product Compare from Catalog</id>
+    <version>1.0</version>
+    <vqmver>2.6.6</vqmver>
+
+    <author><![CDATA[<a onClick="window.open('http://www.gudasoft.com');" title="Gudasoft">Gudasoft</a>]]></author>
+
+
+	<file name="catalog/view/template/product/product.twig">
+
+             <operation>
+             <search position="replace"><![CDATA[<button type="submit" formaction="{{ compare_add }}" data-bs-toggle="tooltip" class="btn btn-light btn-lg" title="{{ button_compare }}"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>]]></search>
+             <add><![CDATA[{# <button type="submit" formaction="{{ compare_add }}" data-bs-toggle="tooltip" class="btn btn-light btn-lg" title="{{ button_compare }}"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>#}]]></add>
+             </operation>
+    </file>
+
+</modification>
