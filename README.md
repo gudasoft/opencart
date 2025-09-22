@@ -16,7 +16,7 @@ Copy the files from version of opencart to your hosting root.
 
 OCMOD will now work.
 
-Read more [here](patch/fix-ocmod.md)
+Read more [here](patch-to-enable-ocmod/fix-ocmod.md)
 
 
 ## OCMOD Extensions
