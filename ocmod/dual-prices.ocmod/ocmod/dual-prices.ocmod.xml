@@ -12,13 +12,28 @@
   <file path="system/library/cart/currency.php">
     <operation>
       <search><![CDATA[return $string;]]></search>
-      <add position="before"><![CDATA[	if($currency == 'BGN'){
-		$amount_multiplied = round($amount / 1.95583, (int)$decimal_place);
-		$string_multiplied = '';
-		$string_multiplied .= number_format($amount_multiplied, (int)$decimal_place, $this->language->get('decimal_point'), $this->language->get('thousand_point'));
-		$string_multiplied .= '€';
-		$string .= ' (' . $string_multiplied . ')';
-	}
+      <add position="before"><![CDATA[
+                if ($currency == 'BGN') {
+                  $eur_currency_value = 1.95583;
+                  $eur_symbol_left = '€';
+                  $eur_symbol_right = '';
+                  $eur_decimal = 2;
+
+                  if (isset($this->currencies['EUR'])) {
+                    $eur_currency_value = $this->currencies['EUR']['value'];
+                    $eur_symbol_left = $this->currencies['EUR']['symbol_left'];
+                    $eur_symbol_right = $this->currencies['EUR']['symbol_right'];
+                    $eur_decimal = $this->currencies['EUR']['decimal_place'];
+                  }
+                }
+
+
+                if (isset($eur_currency_value)) {
+                    $eur_value = round((float)$number * $eur_currency_value, (int)$eur_decimal);
+                    $eur_formatted_value = number_format($eur_value, (int)$eur_decimal, $this->language->get('decimal_point'), $this->language->get('thousand_point'));
+
+                    $string .= " / $eur_symbol_left$eur_formatted_value$eur_symbol_right";
+                }
 ]]></add>
     </operation>
   </file>
