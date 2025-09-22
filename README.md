@@ -1,17 +1,22 @@
 # Useful extension for open-cart for OpenCart 4.1.x.x
 
-Those are tested with OpenCart: 4.1.x.x
+This repo works/tested with OpenCart: 4.1.0.3
 
-Folders content:
+Content:
 
-- patch - enable OCMOD
+- patch - enables OCMOD in Opencart
 - vqmod - extensions
 - ocmod - extensions
 
 
-## Patch
 
-Copy the files from version of opencart to your hosting. OCMOD will now work.
+## OCMOD Patch
+
+Copy the files from version of opencart to your hosting root.
+
+OCMOD will now work.
+
+Read more [here](patch/fix-ocmod.md)
 
 
 ## OCMOD Extensions
@@ -19,6 +24,11 @@ Copy the files from version of opencart to your hosting. OCMOD will now work.
 location: ocmod/dual-prices.ocmod
 
 Display the prices in BGN and EUR.
+
+Inspired from:
+- [tsvetelintsachev](https://tsvetelintsachev.com/%D0%BC%D0%BE%D0%B4%D1%83%D0%BB-bgn-%D0%B8-eur-%D0%B2-opencart-4/) extension
+- [tankoo](https://tankoo.eu/opencart/bezplaten-modul-za-dve-valuti-bgn-eur/) extension
+
 
 ## VQMod Extensions
 
