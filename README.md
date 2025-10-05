@@ -4,9 +4,11 @@ This repo works/tested with OpenCart: 4.1.0.3
 
 Content:
 
-- patch - enables OCMOD in Opencart
 - vqmod - extensions
+- patch-to-enable-ocmod - enables OCMOD in Opencart
 - ocmod - extensions
+
+If you want to have vqmod + ocmod follow the order of install: vqmod, patch-to-enable-ocmod
 
 
 

@@ -52,6 +52,14 @@ Commands:
           if (defined('DIR_CATALOG')) { $replaces[] = array('~^admin\b~', basename(DIR_APPLICATION)); }
         with:
           if (defined('DIR_CATALOG')) { $replaces[] = array('~^admin\b~', 'adminp'); }
+        it should like like that:
+          // VQMODDED START REPLACES //
+          if (defined('DIR_CATALOG')) { $replaces[] = array('~^admin\b~', 'adminp'); }
+          // END REPLACES //
+
+
+
+
 ```
 
 Then go to
