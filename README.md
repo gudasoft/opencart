@@ -26,6 +26,7 @@ Read more [here](patch-to-enable-ocmod/fix-ocmod.md)
 location: ocmod/dual-prices.ocmod
 
 Display the prices in BGN and EUR.
+SEO Friendly description in Bulgarian: Показване на цените в евро и лева за опенкарт(opencart). Безплатно - безплатен extension за всички българи!
 
 Inspired from:
 - [tsvetelintsachev](https://tsvetelintsachev.com/%D0%BC%D0%BE%D0%B4%D1%83%D0%BB-bgn-%D0%B8-eur-%D0%B2-opencart-4/) extension
