@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+    <name>Cookie Consent</name>
+    <version>1.0.0</version>
+    <author>Gudasoft</author>
+    <link>https://www.gudasoft.com</link>
+    <code>cookie_consent</code>
+    <description>
+        An cookie consent extension to comply with EU Cookie Law, CCPA, GDPR and other privacy laws.
+        It is adapted annytab cookie consent extension for opencart 4.1.0.3
+    </description>
+
+    <!-- Insert styles, scripts and html -->
+    <file path="catalog/controller/common/content_bottom.php" error="log">
+        <operation>
+            <search trim="true"><![CDATA[return $this->load->view('common/content_bottom', $data);]]></search>
+            <add position="before"><![CDATA[
+            // Cookie Consent - register extension paths for template and language
+            $this->template->addPath('extension/cookieconsent', DIR_EXTENSION . 'cookieconsent/catalog/view/template/');
+            $this->language->addPath('extension/cookieconsent', DIR_EXTENSION . 'cookieconsent/catalog/language/');
+            $this->load->language('extension/cookieconsent/common/cookie_consent');
+            $cookie_data['cookie_consent_text'] = $this->language->get('cookie_consent_text');
+            $cookie_data['cookie_consent_got_it'] = $this->language->get('cookie_consent_got_it');
+            $cookie_data['cookie_consent_read_more'] = $this->language->get('cookie_consent_read_more');
+            $this->document->addStyle('extension/cookieconsent/catalog/view/javascript/cookieconsent/scripts/css/cookie_consent.min.css');
+            $this->document->addScript('extension/cookieconsent/catalog/view/javascript/cookieconsent/scripts/js/cookie_consent.min.js', 'header');
+            array_push($data['modules'], $this->load->view('extension/cookieconsent/common/cookie_consent', $cookie_data));
+            ]]></add>
+        </operation>
+    </file>
+
+</modification>
